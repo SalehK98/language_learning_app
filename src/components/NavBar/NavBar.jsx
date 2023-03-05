@@ -29,6 +29,14 @@ export default function NavBar() {
         >
           Register
         </Button>
+        <Button
+          variant="outlined"
+          onClick={() => {
+            navigate("exercise");
+          }}
+        >
+          exercise
+        </Button>
       </div>
     </nav>
   );

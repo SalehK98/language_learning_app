@@ -5,6 +5,7 @@ import WelcomePage from "./pages/Welcome/WelcomePage";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
+import Exercise from "./Exercises/Exercise";
 
 function App() {
   const router = createBrowserRouter([
@@ -27,6 +28,10 @@ function App() {
         {
           path: "home",
           element: <Home />,
+        },
+        {
+          path: "exercise",
+          element: <Exercise />,
         },
       ],
     },

@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import classes from "./Register.module.css";
-import signUp from "../../SignUp.mjs";
+// import signUp from "../../SignUp.mjs";
 
 export default function Register() {
   const [didWork, setDidWork] = useState(false);
@@ -44,7 +44,7 @@ export default function Register() {
             <Button
               variant="contained"
               onClick={() => {
-                signUp(email, password, setDidWork);
+                // signUp(email, password, setDidWork);
               }}
             >
               Sign up
@@ -52,7 +52,7 @@ export default function Register() {
           </form>
         </div>
       </div>
-      {didWork ? navigate("/home") : <></>}
+      {/* {didWork ? navigate("/home") : <></>} */}
     </div>
   );
 }

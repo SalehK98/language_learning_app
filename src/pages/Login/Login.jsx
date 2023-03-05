@@ -46,8 +46,8 @@ export default function Login() {
             Login
           </Button>
         </form>
-        {isUser ? navigate("/home") : <></>}
       </div>
+      {isUser ? navigate("/home") : <></>}
     </div>
   );
 }
