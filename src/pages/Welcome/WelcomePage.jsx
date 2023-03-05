@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./WelcomePage.module.css";
-import source from "../../assets/images/background2.jpg";
+import source from "../../assets/images/background2.png";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
