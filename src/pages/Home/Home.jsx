@@ -32,6 +32,7 @@ export default function Home() {
         ) : (
           <div className={classes.home}>
             <div className={classes.home_container}>
+              <h1>my Courses</h1>
               <div className={classes.home_myCourses}>
                 {courses.map((course) => {
                   return <CourseCard course={course} key={course.course_id} />;
