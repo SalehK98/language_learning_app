@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 // import getExercises from "../database/getExercise.mjs";
 // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
 // import { getFirestore } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
@@ -18,6 +19,8 @@ import React, { useEffect, useState } from "react";
 export default function Exercise() {
   const [isData, setIsData] = useState(false);
   const [data, setData] = useState([]);
+  const state = useLocation();
+  console.log(state);
 
   // useEffect(() => {
   //   const data = getExercises(db);

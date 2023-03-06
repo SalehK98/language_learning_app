@@ -7,6 +7,8 @@ import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import Exercise from "./Exercises/Exercise";
 import LoginContext from "./components/LoginContext/LoginContext";
+import CoursePage from "./pages/CoursePage/CoursePage";
+import LessonPage from "./pages/LessonPage/LessonPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -37,6 +39,14 @@ function App() {
         {
           path: "exercise",
           element: <Exercise />,
+        },
+        {
+          path: "course",
+          element: <CoursePage />,
+        },
+        {
+          path: "lesson",
+          element: <LessonPage />,
         },
       ],
     },

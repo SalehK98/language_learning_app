@@ -1,8 +1,10 @@
 import React from "react";
 import classes from "./CourseCard.module.css";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 export default function CourseCard({ course }) {
+  const navigate = useNavigate();
   const {
     course_id,
     course_title,
@@ -18,8 +20,9 @@ export default function CourseCard({ course }) {
         <BsFillArrowRightSquareFill
           size="1.5rem"
           color="teal"
+          style={{ cursor: "pointer" }}
           onClick={() => {
-            console.log("saleh clicked");
+            navigate("/course", { state: course });
           }}
         />
       </div>

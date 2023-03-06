@@ -43,7 +43,9 @@ const login = (email, password, setIsLogged, setUser, isLogged, user2) => {
     });
 };
 
-const signUp = (email, password, setIsLogged, setUser, isLogged, user3) => {
+const signUp = (email, password, setIsLogged, setUser, isLogged, newUser) => {
+  console.log("newuser from signup", newUser);
+  // const { email, password, name, phoneNumber } = newUser;
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in

@@ -12,7 +12,7 @@
         "lesson_title": "Greetings and Introductions",
         "lesson_content": {
           "video_url": "https://www.youtube.com/watch?v=2UjcOyP6f5U",
-          "vocab_list": [
+          "vocabulary": [
             {
               "english_word": "Hello",
               "target_word": "Hola"
@@ -94,7 +94,7 @@
         "lesson_title": "Numbers and Counting",
         "lesson_content": {
           "video_url": "https://www.youtube.com/watch?v=XDzV-dDYu0E",
-          "vocab_list": [
+          "vocabulary": [
             {
               "english_word": "one",
               "target_word": "uno"
@@ -191,157 +191,161 @@
         "lesson_id": 1,
         "lesson_title": "Introduction and Greetings",
         "video_url": "https://www.youtube.com/watch?v=xxxxxx",
-        "vocabulary": [
-          {
-            "english_word": "Hello",
-            "target_word": "مرحباً"
-          },
-          {
-            "english_word": "Goodbye",
-            "target_word": "مع السلامة"
-          },
-          {
-            "english_word": "Please",
-            "target_word": "رجاءً"
-          },
-          {
-            "english_word": "Thank you",
-            "target_word": "شكراً"
-          },
-          {
-            "english_word": "Yes",
-            "target_word": "نعم"
-          },
-          {
-            "english_word": "No",
-            "target_word": "لا"
-          }
-        ],
-        "dialogue": [
-          {
-            "speaker": "Person 1",
-            "line": "مرحباً، كيف حالك؟",
-            "translation": "Hello, how are you?"
-          },
-          {
-            "speaker": "Person 2",
-            "line": "أنا بخير، شكراً. وأنت؟",
-            "translation": "I'm fine, thank you. And you?"
-          },
-          {
-            "speaker": "Person 1",
-            "line": "أنا بخير أيضاً، شكراً.",
-            "translation": "I'm fine too, thank you."
-          }
-        ],
-        "practice_questions": [
-          {
-            "question": "What's the Arabic word for 'please'?",
-            "answer_choices": ["رجاءً", "مرحباً", "شكراً", "لا"],
-            "correct_answer": "رجاءً"
-          },
-          {
-            "question": "What's the Arabic word for 'yes'?",
-            "answer_choices": ["لا", "نعم", "شكراً", "مع السلامة"],
-            "correct_answer": "نعم"
-          },
-          {
-            "question": "What's the Arabic word for 'goodbye'?",
-            "answer_choices": ["مع السلامة", "مرحباً", "رجاءً", "لا"],
-            "correct_answer": "مع السلامة"
-          }
-        ]
+        "lesson_content": {
+          "vocabulary": [
+            {
+              "english_word": "Hello",
+              "target_word": "مرحباً"
+            },
+            {
+              "english_word": "Goodbye",
+              "target_word": "مع السلامة"
+            },
+            {
+              "english_word": "Please",
+              "target_word": "رجاءً"
+            },
+            {
+              "english_word": "Thank you",
+              "target_word": "شكراً"
+            },
+            {
+              "english_word": "Yes",
+              "target_word": "نعم"
+            },
+            {
+              "english_word": "No",
+              "target_word": "لا"
+            }
+          ],
+          "dialogue": [
+            {
+              "speaker": "Person 1",
+              "line": "مرحباً، كيف حالك؟",
+              "translation": "Hello, how are you?"
+            },
+            {
+              "speaker": "Person 2",
+              "line": "أنا بخير، شكراً. وأنت؟",
+              "translation": "I'm fine, thank you. And you?"
+            },
+            {
+              "speaker": "Person 1",
+              "line": "أنا بخير أيضاً، شكراً.",
+              "translation": "I'm fine too, thank you."
+            }
+          ],
+          "practice_questions": [
+            {
+              "question": "What's the Arabic word for 'please'?",
+              "answer_choices": ["رجاءً", "مرحباً", "شكراً", "لا"],
+              "correct_answer": "رجاءً"
+            },
+            {
+              "question": "What's the Arabic word for 'yes'?",
+              "answer_choices": ["لا", "نعم", "شكراً", "مع السلامة"],
+              "correct_answer": "نعم"
+            },
+            {
+              "question": "What's the Arabic word for 'goodbye'?",
+              "answer_choices": ["مع السلامة", "مرحباً", "رجاءً", "لا"],
+              "correct_answer": "مع السلامة"
+            }
+          ]
+        }
       },
       {
         "lesson_id": 2,
         "lesson_title": "Numbers and Counting",
         "video_url": "https://www.youtube.com/watch?v=yyyyyy",
-        "vocabulary": [
-          {
-            "english_word": "one",
-            "target_word": "واحد"
-          },
-          {
-            "english_word": "two",
-            "target_word": "اثنان"
-          },
-          {
-            "english_word": "three",
-            "target_word": "ثلاثة"
-          },
-          {
-            "english_word": "four",
-            "target_word": "أربعة"
-          },
-          {
-            "english_word": "five",
-            "target_word": "خمسة"
-          },
-          {
-            "english_word": "six",
-            "target_word": "ستة"
-          },
-          {
-            "english_word": "seven",
-            "target_word": "سبعة"
-          },
-          {
-            "english_word": "eight",
-            "target_word": "ثمانية"
-          },
-          {
-            "english_word": "nine",
-            "target_word": "تسعة"
-          },
-          {
-            "english_word": "ten",
-            "target_word": "عشرة"
-          }
-        ],
-        "dialogue": [
-          {
-            "speaker": "Person 1",
-            "line": " كم عمرك؟",
-            "translation": "How old are you?"
-          },
-          {
-            "speaker": "Person 2",
-            "line": ".أنا  أبلغ من العمر واحد وعشرين عاما",
-            "translation": "I'm twenty-one years old."
-          },
-          {
-            "speaker": "Person 1",
-            "line": "كم من الأشقاء لديك؟",
-            "translation": "How many siblings do you have?"
-          },
-          {
-            "speaker": "Person 2",
-            "line": "لدى ثلاثة أشقاء.",
-            "translation": "I have three siblings."
-          }
-        ],
-        "practice_questions": [
-          {
-            "question": "What is the Arabic word for 'one'?",
-            "options": ["واحد", "اثنان", "ثلاثة", "أربعة"],
-            "answer": "واحد"
-          },
-          {
-            "question": "What is the Arabic word for 'ten'?",
-            "options": ["خمسة", "ستة", "سبعة", "عشرة"],
-            "answer": "عشرة"
-          },
-          {
-            "question": "What is the Arabic word for 'twenty-five'?",
-            "options": [
-              "عشرون وخمسة",
-              "ثلاثون وخمسة",
-              "أربعون وخمسة",
-              "خمسون وخمسة"
-            ],
-            "answer": "خمسة وعشرون"
-          }
-        ]
+        "lesson_content": {
+          "vocabulary": [
+            {
+              "english_word": "one",
+              "target_word": "واحد"
+            },
+            {
+              "english_word": "two",
+              "target_word": "اثنان"
+            },
+            {
+              "english_word": "three",
+              "target_word": "ثلاثة"
+            },
+            {
+              "english_word": "four",
+              "target_word": "أربعة"
+            },
+            {
+              "english_word": "five",
+              "target_word": "خمسة"
+            },
+            {
+              "english_word": "six",
+              "target_word": "ستة"
+            },
+            {
+              "english_word": "seven",
+              "target_word": "سبعة"
+            },
+            {
+              "english_word": "eight",
+              "target_word": "ثمانية"
+            },
+            {
+              "english_word": "nine",
+              "target_word": "تسعة"
+            },
+            {
+              "english_word": "ten",
+              "target_word": "عشرة"
+            }
+          ],
+          "dialogue": [
+            {
+              "speaker": "Person 1",
+              "line": " كم عمرك؟",
+              "translation": "How old are you?"
+            },
+            {
+              "speaker": "Person 2",
+              "line": ".أنا  أبلغ من العمر واحد وعشرين عاما",
+              "translation": "I'm twenty-one years old."
+            },
+            {
+              "speaker": "Person 1",
+              "line": "كم من الأشقاء لديك؟",
+              "translation": "How many siblings do you have?"
+            },
+            {
+              "speaker": "Person 2",
+              "line": "لدى ثلاثة أشقاء.",
+              "translation": "I have three siblings."
+            }
+          ],
+          "practice_questions": [
+            {
+              "question": "What is the Arabic word for 'one'?",
+              "options": ["واحد", "اثنان", "ثلاثة", "أربعة"],
+              "answer": "واحد"
+            },
+            {
+              "question": "What is the Arabic word for 'ten'?",
+              "options": ["خمسة", "ستة", "سبعة", "عشرة"],
+              "answer": "عشرة"
+            },
+            {
+              "question": "What is the Arabic word for 'twenty-five'?",
+              "options": [
+                "عشرون وخمسة",
+                "ثلاثون وخمسة",
+                "أربعون وخمسة",
+                "خمسون وخمسة"
+              ],
+              "answer": "خمسة وعشرون"
+            }
+          ]
+        }
       }
     ]
   }
