@@ -35,6 +35,14 @@ export default function NavBar() {
             >
               logout
             </Button>
+            <Button
+              variant="outlined"
+              onClick={() => {
+                navigate("home");
+              }}
+            >
+              home
+            </Button>
           </>
         ) : (
           <>
