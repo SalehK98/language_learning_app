@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
-import getExercises from "../getExercise.mjs";
+import getExercises from "../database/getExercise.mjs";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-import {
-  getFirestore,
-  collection,
-  getDocs,
-} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 
 const firebaseConfig = initializeApp({
   apiKey: "AIzaSyBbJsUi5ASfZF3Qxdd2R6v859c7SagH3Us",
@@ -17,7 +13,6 @@ const firebaseConfig = initializeApp({
   measurementId: "G-1XZ0FXKSGV",
 });
 
-// const app = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseConfig);
 
 export default function Exercise() {
@@ -34,6 +29,7 @@ export default function Exercise() {
 
   return (
     <div style={{ padding: "60px" }}>
+      {isData ? console.log(data) : <></>}
       {isData ? (
         data.map((el) => {
           return (
@@ -41,7 +37,7 @@ export default function Exercise() {
               <h1>my type is: {el.type}</h1>
               <p>my question is {el.question}</p>
               <p>my answer is {el.answer}</p>
-              <p>is completed {el.isCompleted.toString()}</p>
+              {/* <p>is completed {el.isCompleted.toString()}</p> */}
             </>
           );
         })

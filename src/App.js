@@ -6,12 +6,17 @@ import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import Exercise from "./Exercises/Exercise";
+import LoginContext from "./components/LoginContext/LoginContext";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "",
-      element: <LayoutWrapper />,
+      element: (
+        <LoginContext>
+          <LayoutWrapper />
+        </LoginContext>
+      ),
       children: [
         {
           path: "",

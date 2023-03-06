@@ -1,0 +1,348 @@
+[
+  {
+    "course_id": 1,
+    "course_title": "Beginner Spanish Course",
+    "target_language": "Spanish",
+    "course_level": "Beginner",
+    "course_description": "This course is designed for beginners who have little or no knowledge of the Spanish language. By the end of this course, you will be able to communicate in basic Spanish and have a solid foundation to continue your language learning journey.",
+    "course_duration": "12 weeks",
+    "lessons": [
+      {
+        "lesson_id": 1,
+        "lesson_title": "Greetings and Introductions",
+        "lesson_content": {
+          "video_url": "https://www.youtube.com/watch?v=2UjcOyP6f5U",
+          "vocab_list": [
+            {
+              "english_word": "Hello",
+              "target_word": "Hola"
+            },
+            {
+              "english_word": "Good morning",
+              "target_word": "Buenos días"
+            },
+            {
+              "english_word": "Good afternoon",
+              "target_word": "Buenas tardes"
+            },
+            {
+              "english_word": "Good evening",
+              "target_word": "Buenas noches"
+            },
+            {
+              "english_word": "My name is...",
+              "target_word": "Me llamo..."
+            },
+            {
+              "english_word": "What's your name?",
+              "target_word": "¿Cómo te llamas?"
+            }
+          ],
+          "dialogue": [
+            {
+              "speaker": "Person 1",
+              "line": "¡Hola! Me llamo Ana. ¿Cómo te llamas?",
+              "translation": "Hi! My name is Ana. What's your name?"
+            },
+            {
+              "speaker": "Person 2",
+              "line": "Hola Ana, me llamo Carlos.",
+              "translation": "Hi Ana, my name is Carlos."
+            },
+            {
+              "speaker": "Person 1",
+              "line": "Encantada de conocerte.",
+              "translation": "Nice to meet you."
+            },
+            {
+              "speaker": "Person 2",
+              "line": "Igualmente.",
+              "translation": "Likewise."
+            }
+          ],
+          "practice_questions": [
+            {
+              "question": "How do you say 'good morning' in Spanish?",
+              "answer_choices": [
+                "Buenos días",
+                "Buenas tardes",
+                "Buenas noches",
+                "Adiós"
+              ],
+              "correct_answer": "Buenos días"
+            },
+            {
+              "question": "What's the Spanish word for 'hello'?",
+              "answer_choices": ["Hola", "Adiós", "Gracias", "Por favor"],
+              "correct_answer": "Hola"
+            },
+            {
+              "question": "How do you ask someone their name in Spanish?",
+              "answer_choices": [
+                "¿Cómo estás?",
+                "¿Qué tal?",
+                "¿Cómo te llamas?",
+                "¿Qué hora es?"
+              ],
+              "correct_answer": "¿Cómo te llamas?"
+            }
+          ]
+        }
+      },
+      {
+        "lesson_id": 2,
+        "lesson_title": "Numbers and Counting",
+        "lesson_content": {
+          "video_url": "https://www.youtube.com/watch?v=XDzV-dDYu0E",
+          "vocab_list": [
+            {
+              "english_word": "one",
+              "target_word": "uno"
+            },
+            {
+              "english_word": "two",
+              "target_word": "dos"
+            },
+            {
+              "english_word": "three",
+              "target_word": "tres"
+            },
+            {
+              "english_word": "four",
+              "target_word": "cuatro"
+            },
+            {
+              "english_word": "five",
+              "target_word": "cinco"
+            },
+            {
+              "english_word": "six",
+              "target_word": "seis"
+            },
+            {
+              "english_word": "seven",
+              "target_word": "siete"
+            },
+            {
+              "english_word": "eight",
+              "target_word": "ocho"
+            },
+            {
+              "english_word": "nine",
+              "target_word": "nueve"
+            },
+            {
+              "english_word": "ten",
+              "target_word": "diez"
+            }
+          ],
+          "dialogue": [
+            {
+              "speaker": "Person 1",
+              "line": "¿Cuántos años tienes?",
+              "translation": "How old are you?"
+            },
+            {
+              "speaker": "Person 2",
+              "line": "Tengo veintiún años.",
+              "translation": "I'm twenty-one years old."
+            },
+            {
+              "speaker": "Person 1",
+              "line": "¿Cuántos hermanos tienes?",
+              "translation": "How many siblings do you have?"
+            },
+            {
+              "speaker": "Person 2",
+              "line": "Tengo tres hermanos.",
+              "translation": "I have three siblings."
+            }
+          ],
+          "practice_questions": [
+            {
+              "question": "What's the Spanish word for 'two'?",
+              "answer_choices": ["uno", "dos", "tres", "cuatro"],
+              "correct_answer": "dos"
+            },
+            {
+              "question": "What's the Spanish word for 'nine'?",
+              "answer_choices": ["siete", "ocho", "nueve", "diez"],
+              "correct_answer": "nueve"
+            },
+            {
+              "question": "What's the Spanish word for 'thirteen'?",
+              "answer_choices": ["trece", "doce", "catorce", "quince"],
+              "correct_answer": "trece"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "course_id": 2,
+    "course_title": "Arabic for Beginners",
+    "target_language": "Arabic",
+    "course_level": "Beginner",
+    "course_description": "This course is designed for beginners who have little or no knowledge of the Arabic language. By the end of this course, you will be able to communicate in basic Arabic and have a solid foundation to continue your language learning journey.",
+    "course_duration": "10 weeks",
+    "lessons": [
+      {
+        "lesson_id": 1,
+        "lesson_title": "Introduction and Greetings",
+        "video_url": "https://www.youtube.com/watch?v=xxxxxx",
+        "vocabulary": [
+          {
+            "english_word": "Hello",
+            "target_word": "مرحباً"
+          },
+          {
+            "english_word": "Goodbye",
+            "target_word": "مع السلامة"
+          },
+          {
+            "english_word": "Please",
+            "target_word": "رجاءً"
+          },
+          {
+            "english_word": "Thank you",
+            "target_word": "شكراً"
+          },
+          {
+            "english_word": "Yes",
+            "target_word": "نعم"
+          },
+          {
+            "english_word": "No",
+            "target_word": "لا"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Person 1",
+            "line": "مرحباً، كيف حالك؟",
+            "translation": "Hello, how are you?"
+          },
+          {
+            "speaker": "Person 2",
+            "line": "أنا بخير، شكراً. وأنت؟",
+            "translation": "I'm fine, thank you. And you?"
+          },
+          {
+            "speaker": "Person 1",
+            "line": "أنا بخير أيضاً، شكراً.",
+            "translation": "I'm fine too, thank you."
+          }
+        ],
+        "practice_questions": [
+          {
+            "question": "What's the Arabic word for 'please'?",
+            "answer_choices": ["رجاءً", "مرحباً", "شكراً", "لا"],
+            "correct_answer": "رجاءً"
+          },
+          {
+            "question": "What's the Arabic word for 'yes'?",
+            "answer_choices": ["لا", "نعم", "شكراً", "مع السلامة"],
+            "correct_answer": "نعم"
+          },
+          {
+            "question": "What's the Arabic word for 'goodbye'?",
+            "answer_choices": ["مع السلامة", "مرحباً", "رجاءً", "لا"],
+            "correct_answer": "مع السلامة"
+          }
+        ]
+      },
+      {
+        "lesson_id": 2,
+        "lesson_title": "Numbers and Counting",
+        "video_url": "https://www.youtube.com/watch?v=yyyyyy",
+        "vocabulary": [
+          {
+            "english_word": "one",
+            "target_word": "واحد"
+          },
+          {
+            "english_word": "two",
+            "target_word": "اثنان"
+          },
+          {
+            "english_word": "three",
+            "target_word": "ثلاثة"
+          },
+          {
+            "english_word": "four",
+            "target_word": "أربعة"
+          },
+          {
+            "english_word": "five",
+            "target_word": "خمسة"
+          },
+          {
+            "english_word": "six",
+            "target_word": "ستة"
+          },
+          {
+            "english_word": "seven",
+            "target_word": "سبعة"
+          },
+          {
+            "english_word": "eight",
+            "target_word": "ثمانية"
+          },
+          {
+            "english_word": "nine",
+            "target_word": "تسعة"
+          },
+          {
+            "english_word": "ten",
+            "target_word": "عشرة"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Person 1",
+            "line": " كم عمرك؟",
+            "translation": "How old are you?"
+          },
+          {
+            "speaker": "Person 2",
+            "line": ".أنا  أبلغ من العمر واحد وعشرين عاما",
+            "translation": "I'm twenty-one years old."
+          },
+          {
+            "speaker": "Person 1",
+            "line": "كم من الأشقاء لديك؟",
+            "translation": "How many siblings do you have?"
+          },
+          {
+            "speaker": "Person 2",
+            "line": "لدى ثلاثة أشقاء.",
+            "translation": "I have three siblings."
+          }
+        ],
+        "practice_questions": [
+          {
+            "question": "What is the Arabic word for 'one'?",
+            "options": ["واحد", "اثنان", "ثلاثة", "أربعة"],
+            "answer": "واحد"
+          },
+          {
+            "question": "What is the Arabic word for 'ten'?",
+            "options": ["خمسة", "ستة", "سبعة", "عشرة"],
+            "answer": "عشرة"
+          },
+          {
+            "question": "What is the Arabic word for 'twenty-five'?",
+            "options": [
+              "عشرون وخمسة",
+              "ثلاثون وخمسة",
+              "أربعون وخمسة",
+              "خمسون وخمسة"
+            ],
+            "answer": "خمسة وعشرون"
+          }
+        ]
+      }
+    ]
+  }
+]
