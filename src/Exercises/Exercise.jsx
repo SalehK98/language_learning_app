@@ -1,52 +1,34 @@
+import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-// import getExercises from "../database/getExercise.mjs";
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-// import { getFirestore } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
-
-// const firebaseConfig = initializeApp({
-//   apiKey: "AIzaSyBbJsUi5ASfZF3Qxdd2R6v859c7SagH3Us",
-//   authDomain: "language-learning-app-ed162.firebaseapp.com",
-//   projectId: "language-learning-app-ed162",
-//   storageBucket: "language-learning-app-ed162.appspot.com",
-//   messagingSenderId: "457208596894",
-//   appId: "1:457208596894:web:2bd7eeb9028802311aee8f",
-//   measurementId: "G-1XZ0FXKSGV",
-// });
-
-// const db = getFirestore(firebaseConfig);
+import classes from "./Exercise.module.css";
 
 export default function Exercise() {
-  const [isData, setIsData] = useState(false);
-  const [data, setData] = useState([]);
-  const state = useLocation();
+  const { state } = useLocation();
+  const { question, correct_answer, answer_choices } = state;
+  const [color, setColor] = useState();
   console.log(state);
 
-  // useEffect(() => {
-  //   const data = getExercises(db);
-  //   data.then((res) => {
-  //     setData(res);
-  //     setIsData(true);
-  //   });
-  // }, []);
-
   return (
-    <div style={{ padding: "60px" }}>
-      {isData ? console.log(data) : <></>}
-      {isData ? (
-        data.map((el) => {
+    <div className={classes.exercise}>
+      <div
+        className={classes.exercise_container}
+        style={{ backgroundColor: color }}
+      >
+        <h1>{question}</h1>
+        {answer_choices.map((answer) => {
           return (
-            <>
-              <h1>my type is: {el.type}</h1>
-              <p>my question is {el.question}</p>
-              <p>my answer is {el.answer}</p>
-              {/* <p>is completed {el.isCompleted.toString()}</p> */}
-            </>
+            <Button
+              variant="contained"
+              onClick={() => {
+                answer === correct_answer ? setColor("green") : setColor("red");
+              }}
+            >
+              {answer}
+            </Button>
           );
-        })
-      ) : (
-        <></>
-      )}
+        })}
+      </div>
     </div>
   );
 }

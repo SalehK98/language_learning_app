@@ -21,10 +21,10 @@ export default function NavBar() {
             <Button
               variant="outlined"
               onClick={() => {
-                navigate("exercise");
+                navigate("translate");
               }}
             >
-              exercise
+              translate
             </Button>
             <Button
               variant="outlined"

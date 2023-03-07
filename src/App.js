@@ -9,6 +9,7 @@ import Exercise from "./Exercises/Exercise";
 import LoginContext from "./components/LoginContext/LoginContext";
 import CoursePage from "./pages/CoursePage/CoursePage";
 import LessonPage from "./pages/LessonPage/LessonPage";
+import TranslatePage from "./pages/TranslatePage/TranslatePage";
 
 function App() {
   const router = createBrowserRouter([
@@ -47,6 +48,10 @@ function App() {
         {
           path: "lesson",
           element: <LessonPage />,
+        },
+        {
+          path: "translate",
+          element: <TranslatePage />,
         },
       ],
     },

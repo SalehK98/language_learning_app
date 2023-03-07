@@ -6,6 +6,7 @@
     "course_level": "Beginner",
     "course_description": "This course is designed for beginners who have little or no knowledge of the Spanish language. By the end of this course, you will be able to communicate in basic Spanish and have a solid foundation to continue your language learning journey.",
     "course_duration": "12 weeks",
+    "userId": ["1", "2"],
     "lessons": [
       {
         "lesson_id": 1,
@@ -62,6 +63,7 @@
           ],
           "practice_questions": [
             {
+              "id": 1,
               "question": "How do you say 'good morning' in Spanish?",
               "answer_choices": [
                 "Buenos días",
@@ -72,11 +74,13 @@
               "correct_answer": "Buenos días"
             },
             {
+              "id": 2,
               "question": "What's the Spanish word for 'hello'?",
               "answer_choices": ["Hola", "Adiós", "Gracias", "Por favor"],
               "correct_answer": "Hola"
             },
             {
+              "id": 3,
               "question": "How do you ask someone their name in Spanish?",
               "answer_choices": [
                 "¿Cómo estás?",
@@ -160,16 +164,19 @@
           ],
           "practice_questions": [
             {
+              "id": 1,
               "question": "What's the Spanish word for 'two'?",
               "answer_choices": ["uno", "dos", "tres", "cuatro"],
               "correct_answer": "dos"
             },
             {
+              "id": 2,
               "question": "What's the Spanish word for 'nine'?",
               "answer_choices": ["siete", "ocho", "nueve", "diez"],
               "correct_answer": "nueve"
             },
             {
+              "id": 3,
               "question": "What's the Spanish word for 'thirteen'?",
               "answer_choices": ["trece", "doce", "catorce", "quince"],
               "correct_answer": "trece"
@@ -186,6 +193,8 @@
     "course_level": "Beginner",
     "course_description": "This course is designed for beginners who have little or no knowledge of the Arabic language. By the end of this course, you will be able to communicate in basic Arabic and have a solid foundation to continue your language learning journey.",
     "course_duration": "10 weeks",
+    "userId": ["1", "2"],
+
     "lessons": [
       {
         "lesson_id": 1,
@@ -237,16 +246,19 @@
           ],
           "practice_questions": [
             {
+              "id": 1,
               "question": "What's the Arabic word for 'please'?",
               "answer_choices": ["رجاءً", "مرحباً", "شكراً", "لا"],
               "correct_answer": "رجاءً"
             },
             {
+              "id": 2,
               "question": "What's the Arabic word for 'yes'?",
               "answer_choices": ["لا", "نعم", "شكراً", "مع السلامة"],
               "correct_answer": "نعم"
             },
             {
+              "id": 3,
               "question": "What's the Arabic word for 'goodbye'?",
               "answer_choices": ["مع السلامة", "مرحباً", "رجاءً", "لا"],
               "correct_answer": "مع السلامة"
@@ -325,24 +337,27 @@
           ],
           "practice_questions": [
             {
+              "id": 1,
               "question": "What is the Arabic word for 'one'?",
-              "options": ["واحد", "اثنان", "ثلاثة", "أربعة"],
-              "answer": "واحد"
+              "answer_choices": ["واحد", "اثنان", "ثلاثة", "أربعة"],
+              "correct_answer": "واحد"
             },
             {
+              "id": 2,
               "question": "What is the Arabic word for 'ten'?",
-              "options": ["خمسة", "ستة", "سبعة", "عشرة"],
-              "answer": "عشرة"
+              "answer_choices": ["خمسة", "ستة", "سبعة", "عشرة"],
+              "correct_answer": "عشرة"
             },
             {
+              "id": 3,
               "question": "What is the Arabic word for 'twenty-five'?",
-              "options": [
-                "عشرون وخمسة",
-                "ثلاثون وخمسة",
-                "أربعون وخمسة",
-                "خمسون وخمسة"
+              "answer_choices": [
+                "خمسة و عشرون",
+                "خمسة و ثلاثون",
+                "خمسة و أربعون",
+                "خمسة و خمسون"
               ],
-              "answer": "خمسة وعشرون"
+              "correct_answer": "خمسة و عشرون"
             }
           ]
         }

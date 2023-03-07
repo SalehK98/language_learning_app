@@ -47,7 +47,9 @@ export default function Home() {
         )
       ) : (
         <div className={classes.home}>
-          <div className={classes.home_loader}></div>
+          <div className={classes.home_container}>
+            <div className={classes.home_loader}></div>
+          </div>
         </div>
       )}
     </>
