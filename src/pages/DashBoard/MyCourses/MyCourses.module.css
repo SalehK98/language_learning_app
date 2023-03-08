@@ -1,0 +1,31 @@
+.myCourses {
+  width: 100%;
+  /* height: 50%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* margin: auto; */
+}
+
+.myCourses_courseNav {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.myCourses_activeCourses {
+  display: grid;
+  /* display: flex; */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* grid-template-rows: repeat(auto, 2fr); */
+  /* grid-template-columns: repeat(auto, 2fr); */
+  gap: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  height: 35%;
+  justify-content: space-around;
+  /* background-color: rebeccapurple; */
+}

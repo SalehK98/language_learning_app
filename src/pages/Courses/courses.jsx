@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function courses() {
-  return <div>courses</div>;
+export default function Courses() {
+  return <div>Courses</div>;
 }

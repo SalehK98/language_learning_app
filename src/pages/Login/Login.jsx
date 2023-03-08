@@ -22,7 +22,7 @@ export default function Login() {
   return (
     <>
       {data.isLogged ? (
-        navigate("/home")
+        navigate("/dashBoard")
       ) : (
         <div className={classes.login}>
           <div className={classes.login_container}>

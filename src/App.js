@@ -4,12 +4,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import WelcomePage from "./pages/Welcome/WelcomePage";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
-import Home from "./pages/Home/Home";
+import DashBoard from "./pages/DashBoard/DashBoard";
 import Exercise from "./Exercises/Exercise";
 import LoginContext from "./components/LoginContext/LoginContext";
 import CoursePage from "./pages/CoursePage/CoursePage";
 import LessonPage from "./pages/LessonPage/LessonPage";
 import TranslatePage from "./pages/TranslatePage/TranslatePage";
+import MyCoursesPage from "./pages/MyCoursesPage/MyCoursesPage";
+import ProgressPage from "./pages/ProgressPage/ProgressPage";
+import Courses from "./pages/Courses/Courses";
 
 function App() {
   const router = createBrowserRouter([
@@ -34,20 +37,32 @@ function App() {
           element: <Login />,
         },
         {
-          path: "home",
-          element: <Home />,
+          path: "dashBoard",
+          element: <DashBoard />,
         },
         {
-          path: "exercise",
-          element: <Exercise />,
+          path: "dashBoard/myCoursesPage",
+          element: <MyCoursesPage />,
         },
         {
-          path: "course",
+          path: "dashboard/myProgress",
+          element: <ProgressPage />,
+        },
+        {
+          path: "courses",
+          element: <Courses />,
+        },
+        {
+          path: "courses/:courseId",
           element: <CoursePage />,
         },
         {
-          path: "lesson",
+          path: "courses/:courseId/:lessonId",
           element: <LessonPage />,
+        },
+        {
+          path: "courses/:courseId/:lessonId/:exerciseId",
+          element: <Exercise />,
         },
         {
           path: "translate",

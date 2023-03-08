@@ -22,7 +22,12 @@ export default function CourseCard({ course }) {
           color="teal"
           style={{ cursor: "pointer" }}
           onClick={() => {
-            navigate("/course", { state: course });
+            navigate(
+              `/courses/` + course_id + `?x=${encodeURI(course_title)}`,
+              {
+                state: course,
+              }
+            );
           }}
         />
       </div>

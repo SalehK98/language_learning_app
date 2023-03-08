@@ -1,9 +1,12 @@
 import React from "react";
 import classes from "./LessonPage.module.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
 export default function LessonPage() {
+  const params = useParams();
+  console.log("params", params);
+
   const { state } = useLocation();
   const { dialogue, vocabulary, practice_questions } = state.lesson_content;
   const navigate = useNavigate();
@@ -41,7 +44,10 @@ export default function LessonPage() {
                 <BsFillArrowRightSquareFill
                   size="1.5rem"
                   onClick={() => {
-                    navigate("/exercise", { state: exercise });
+                    navigate(
+                      exercise.id + `?x=${encodeURI("exercise" + exercise.id)}`,
+                      { state: exercise }
+                    );
                   }}
                 />
               </div>

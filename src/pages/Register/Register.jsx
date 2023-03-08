@@ -16,7 +16,7 @@ export default function Register() {
   return (
     <>
       {data.isLogged ? (
-        navigate("/home")
+        navigate("/dashBoard")
       ) : (
         <div className={classes.register}>
           <div className={classes.register_container}>

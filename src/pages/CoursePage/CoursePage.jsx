@@ -1,11 +1,13 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import classes from "./CoursePage.module.css";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
 export default function CoursePage() {
   const { state } = useLocation();
   const navigate = useNavigate();
+  const params = useParams();
+  console.log("params", params.courseId);
   const {
     course_id,
     course_title,
@@ -34,7 +36,19 @@ export default function CoursePage() {
                 <BsFillArrowRightSquareFill
                   size="1.5rem"
                   onClick={() => {
-                    navigate("/lesson", { state: lesson });
+                    navigate(
+                      lesson.lesson_id + `?x=${encodeURI(lesson.lesson_title)}`,
+                      //  +
+                      // "/courses/" +
+                      // course_title +
+                      // "%" +
+                      // course_id +
+                      // "/" +
+                      // lesson.lesson_title +
+                      // "%" +
+                      // lesson.lesson_id
+                      { state: lesson }
+                    );
                   }}
                 />
               </div>
