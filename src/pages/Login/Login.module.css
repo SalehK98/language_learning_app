@@ -17,6 +17,7 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: teal;
+  opacity: 0.9;
   border: transparent;
   border-radius: 15px;
 }

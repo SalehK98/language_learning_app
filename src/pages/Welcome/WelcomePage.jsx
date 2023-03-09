@@ -4,7 +4,7 @@ import source from "../../assets/images/background2.png";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
-export default function WelcomePage() {
+export default function WelcomePage({ setScreen, setMyClass, theClass }) {
   const { isLogged, user, userId } = JSON.parse(
     localStorage.getItem("loginInfo")
   );
@@ -23,7 +23,9 @@ export default function WelcomePage() {
             variant="contained"
             style={{ backgroundColor: "#3e69a4" }}
             onClick={() => {
-              isLogged ? navigate("dashBoard") : navigate("entry");
+              setScreen("firstLogin");
+              setMyClass(theClass);
+              // isLogged ? navigate("dashBoard") : navigate("entry");
             }}
           >
             Start Learning
