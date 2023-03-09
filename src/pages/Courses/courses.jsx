@@ -55,7 +55,7 @@ export default function Courses() {
           </div>
         )
       ) : (
-        navigate("login")
+        navigate("/login")
       )}
     </>
   );

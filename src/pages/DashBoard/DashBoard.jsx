@@ -46,7 +46,16 @@ export default function Home() {
         setIsData2(true);
       }
     });
+
+    // return fetchUser
   }, []);
+
+  // fetchUser.then((result) => {
+  //   if (!error2) {
+  //     setMyUser(result);
+  //     setIsData2(true);
+  //   }
+  // });
 
   return (
     <>
