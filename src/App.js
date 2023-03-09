@@ -13,8 +13,11 @@ import TranslatePage from "./pages/TranslatePage/TranslatePage";
 import MyCoursesPage from "./pages/MyCoursesPage/MyCoursesPage";
 import ProgressPage from "./pages/ProgressPage/ProgressPage";
 import Courses from "./pages/Courses/Courses";
+import Entry from "./pages/Entry/Entry";
 
 function App() {
+  const status = JSON.parse(localStorage.getItem("loginInfo"));
+
   const router = createBrowserRouter([
     {
       path: "",
@@ -27,6 +30,10 @@ function App() {
         {
           path: "",
           element: <WelcomePage />,
+        },
+        {
+          path: "entry",
+          element: <Entry />,
         },
         {
           path: "register",

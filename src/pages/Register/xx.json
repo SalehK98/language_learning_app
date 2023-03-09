@@ -1,75 +1,76 @@
 [
   {
-    "id": 1,
-    "name": "John Doe",
-    "email": "johndoe@example.com",
+    "id": " 1",
+    "name": "123456",
+    "email": "123456@gmail.com",
     "courses": [
       {
-        "id": 1,
+        "id": "1",
         "name": "Spanish for Beginners",
+        "completed": false,
         "progress": [
           {
-            "lesson_id": 1,
+            "lesson_id": "1",
             "exercises": [
               {
-                "id": 1,
+                "id": "1",
                 "status": "completed"
               },
               {
-                "id": 2,
+                "id": "2",
                 "status": "in_progress"
               },
               {
-                "id": 3,
+                "id": "3",
                 "status": "not_started"
               }
             ],
             "quiz": {
-              "id": 1,
+              "id": "1",
               "status": "not_started"
             },
             "completed": false
           },
           {
-            "lesson_id": 2,
+            "lesson_id": "2",
             "exercises": [
               {
-                "id": 1,
+                "id": "1",
                 "status": "completed"
               },
               {
-                "id": 2,
+                "id": "2",
                 "status": "completed"
               },
               {
-                "id": 3,
+                "id": "3",
                 "status": "in_progress"
               }
             ],
             "quiz": {
-              "id": 1,
+              "id": "1",
               "status": "not_started"
             },
             "completed": false
           },
           {
-            "lesson_id": 3,
+            "lesson_id": "3",
             "exercises": [
               {
-                "id": 1,
+                "id": "1",
                 "status": "in_progress"
               },
               {
-                "id": 2,
+                "id": "2",
                 "status": "not_started"
               },
               {
-                "id": 3,
+                "id": "3",
                 "status": "not_started"
               }
             ],
             "quiz": {
-              "id": 1,
+              "id": "1",
               "status": "not_started"
             },
             "completed": false
@@ -77,71 +78,72 @@
         ]
       },
       {
-        "id": 2,
+        "id": "2",
         "name": "Arabic for Beginners",
+        "completed": false,
         "progress": [
           {
-            "lesson_id": 1,
+            "lesson_id": "1",
             "exercises": [
               {
-                "id": 1,
+                "id": "1",
                 "status": "not_started"
               },
               {
-                "id": 2,
+                "id": "2",
                 "status": "in_progress"
               },
               {
-                "id": 3,
+                "id": "3",
                 "status": "completed"
               }
             ],
             "quiz": {
-              "id": 1,
+              "id": "1",
               "status": "not_started"
             },
             "completed": false
           },
           {
-            "lesson_id": 2,
+            "lesson_id": "2",
             "exercises": [
               {
-                "id": 1,
+                "id": "1",
                 "status": "completed"
               },
               {
-                "id": 2,
+                "id": "2",
                 "status": "completed"
               },
               {
-                "id": 3,
+                "id": "3",
                 "status": "completed"
               }
             ],
             "quiz": {
-              "id": 1,
+              "id": "1",
               "status": "not_started"
             },
             "completed": true
           },
           {
-            "lesson_id": 3,
+            "lesson_id": "3",
             "exercises": [
               {
-                "id": 1,
+                "id": "1",
                 "status": "completed"
               },
               {
-                "id": 2,
+                "id": "2",
                 "status": "completed"
               },
               {
-                "id": 3,
+                "id": "3",
                 "status": "completed"
               }
             ],
             "quiz": {
-              "id": 1,
+              "id": "1",
               "status": "completed"
             },
             "completed": true

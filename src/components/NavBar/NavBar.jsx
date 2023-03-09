@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import classes from "./NavBar.module.css";
 import { MyLoginContext } from "../LoginContext/LoginContext";
@@ -7,7 +7,12 @@ import { logOut } from "../../database/firebase.mjs";
 
 export default function NavBar() {
   const navigate = useNavigate();
-  const { isLogged, setIsLogged, user, setUser } = useContext(MyLoginContext);
+  // const { isLogged, setIsLogged, user, setUser } = useContext(MyLoginContext);
+  const [isData, setIsData] = useState();
+
+  const { isLogged, user, userId } = JSON.parse(
+    localStorage.getItem("loginInfo")
+  );
 
   return (
     <nav>
@@ -37,7 +42,7 @@ export default function NavBar() {
             <Button
               variant="outlined"
               onClick={() => {
-                navigate("dashBoard");
+                navigate("courses");
               }}
             >
               browse
@@ -61,8 +66,8 @@ export default function NavBar() {
             <Button
               variant="outlined"
               onClick={() => {
-                logOut(setIsLogged, setUser);
                 navigate("login");
+                logOut(setIsData);
               }}
             >
               logout

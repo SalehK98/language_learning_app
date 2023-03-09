@@ -21,19 +21,29 @@ const firebaseConfig = initializeApp({
 
 const auth = getAuth(firebaseConfig);
 
-const login = (email, password, setIsLogged, setUser, isLogged, user2) => {
+const login = (
+  email,
+  password,
+  setIsLogged,
+  setUser,
+  isLogged,
+  user2,
+  setIsData
+) => {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
       console.log("user", user);
-      setIsLogged(true);
+      // setIsLogged(true);
+      setIsData(true);
       localStorage.setItem(
         "loginInfo",
-        JSON.stringify({ isLogged: isLogged, user: user.email })
+        JSON.stringify({ isLogged: true, user: user.email, userId: user.uid })
       );
-      setUser(user);
+      // setUser(user);
       // ...
+      // return user ? true : false;
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -43,7 +53,15 @@ const login = (email, password, setIsLogged, setUser, isLogged, user2) => {
     });
 };
 
-const signUp = (email, password, setIsLogged, setUser, isLogged, newUser) => {
+const signUp = (
+  email,
+  password,
+  setIsLogged,
+  setUser,
+  isLogged,
+  newUser,
+  setIsData
+) => {
   console.log("newuser from signup", newUser);
   // const { email, password, name, phoneNumber } = newUser;
   createUserWithEmailAndPassword(auth, email, password)
@@ -51,8 +69,10 @@ const signUp = (email, password, setIsLogged, setUser, isLogged, newUser) => {
       // Signed in
       const user = userCredential.user;
       console.log(user);
-      login(email, password, setIsLogged, setUser, isLogged, user);
+      login(email, password, setIsLogged, setUser, isLogged, user, setIsData);
       // ...
+      // console.log("cb2", cb);
+      // return cb;
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -63,15 +83,16 @@ const signUp = (email, password, setIsLogged, setUser, isLogged, newUser) => {
     });
 };
 
-const logOut = (setIsLogged, setUser) => {
+const logOut = (setIsData, setIsLogged, setUser) => {
   signOut(auth)
     .then(() => {
       // Sign-out successful.
-      setIsLogged(false);
-      setUser(null);
+      // setIsLogged(false);
+      // setUser(null);
+      setIsData(true);
       localStorage.setItem(
         "loginInfo",
-        JSON.stringify({ isLogged: false, user: "" })
+        JSON.stringify({ isLogged: false, user: "", userId: "" })
       );
       console.log("signedOut");
     })
@@ -84,6 +105,8 @@ const logOut = (setIsLogged, setUser) => {
 onAuthStateChanged(auth, (user) => {
   if (user !== null) {
     console.log("logged in", user);
+    const uid = user.uid;
+    console.log("uid", uid);
   } else {
     console.log("no user", user);
   }

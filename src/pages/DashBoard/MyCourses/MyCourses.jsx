@@ -4,15 +4,22 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import classes from "./MyCourses.module.css";
 import { useNavigate } from "react-router-dom";
 
-export default function MyCourses({ courses }) {
+export default function MyCourses({ courses, user }) {
   const navigate = useNavigate();
+  const myCourses = user.courses.map((course) => {
+    return course.id;
+  });
+
   const drawCourses = () => {
-    const arr = [];
-    for (let i = 0; i < 3; i++) {
-      arr.push(<CourseCard course={courses[i]} key={courses[i].course_id} />);
-    }
-    return arr;
+    return courses
+      .filter((course) => {
+        return myCourses.includes(course.id);
+      })
+      .map((course) => {
+        return <CourseCard course={course} user={user} key={course.id} />;
+      });
   };
+
   return (
     <div className={classes.myCourses}>
       <div className={classes.myCourses_courseNav}>
@@ -27,12 +34,7 @@ export default function MyCourses({ courses }) {
           />
         </span>
       </div>
-      <div className={classes.myCourses_activeCourses}>
-        {drawCourses()}
-        {/* {courses.map((course) => {
-      return <CourseCard course={course} key={course.course_id} />;
-    })} */}
-      </div>
+      <div className={classes.myCourses_activeCourses}>{drawCourses()}</div>
     </div>
   );
 }

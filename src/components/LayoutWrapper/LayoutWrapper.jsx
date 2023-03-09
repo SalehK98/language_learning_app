@@ -5,7 +5,7 @@ import NavBar from "../NavBar/NavBar";
 
 localStorage.setItem(
   "loginInfo",
-  JSON.stringify({ isLogged: false, user: "" })
+  JSON.stringify({ isLogged: false, user: "", userId: "" })
 );
 
 export default function LayoutWrapper() {

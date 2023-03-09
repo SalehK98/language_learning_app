@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Progress.module.css";
 
-export default function Progress({ users }) {
-  console.log("users from progress", users);
-  const { id, name, email, courses } = users[0];
+export default function Progress({ user }) {
+  console.log("users from progress", user);
+  const { id, name, email, courses } = user;
 
   const drawCourse = (courses) => {
     return courses.map((course) => {
@@ -11,6 +11,7 @@ export default function Progress({ users }) {
         <>
           <div key={course.id}>
             <p>{course.name}</p>
+            <p>completed:{course.completed.toString()}</p>
             {drawLesson(course)}
           </div>
           <hr width="200px" />

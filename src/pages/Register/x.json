@@ -1,6 +1,6 @@
 [
   {
-    "course_id": 1,
+    "id": "1",
     "course_title": "Beginner Spanish Course",
     "target_language": "Spanish",
     "course_level": "Beginner",
@@ -9,7 +9,7 @@
     "userId": ["1", "2"],
     "lessons": [
       {
-        "lesson_id": 1,
+        "id": "1",
         "lesson_title": "Greetings and Introductions",
         "lesson_content": {
           "video_url": "https://www.youtube.com/watch?v=2UjcOyP6f5U",
@@ -63,7 +63,7 @@
           ],
           "practice_questions": [
             {
-              "id": 1,
+              "id": "1",
               "question": "How do you say 'good morning' in Spanish?",
               "answer_choices": [
                 "Buenos días",
@@ -74,13 +74,13 @@
               "correct_answer": "Buenos días"
             },
             {
-              "id": 2,
+              "id": "2",
               "question": "What's the Spanish word for 'hello'?",
               "answer_choices": ["Hola", "Adiós", "Gracias", "Por favor"],
               "correct_answer": "Hola"
             },
             {
-              "id": 3,
+              "id": "3",
               "question": "How do you ask someone their name in Spanish?",
               "answer_choices": [
                 "¿Cómo estás?",
@@ -94,7 +94,7 @@
         }
       },
       {
-        "lesson_id": 2,
+        "id": "2",
         "lesson_title": "Numbers and Counting",
         "lesson_content": {
           "video_url": "https://www.youtube.com/watch?v=XDzV-dDYu0E",
@@ -164,19 +164,19 @@
           ],
           "practice_questions": [
             {
-              "id": 1,
+              "id": "1",
               "question": "What's the Spanish word for 'two'?",
               "answer_choices": ["uno", "dos", "tres", "cuatro"],
               "correct_answer": "dos"
             },
             {
-              "id": 2,
+              "id": "2",
               "question": "What's the Spanish word for 'nine'?",
               "answer_choices": ["siete", "ocho", "nueve", "diez"],
               "correct_answer": "nueve"
             },
             {
-              "id": 3,
+              "id": "3",
               "question": "What's the Spanish word for 'thirteen'?",
               "answer_choices": ["trece", "doce", "catorce", "quince"],
               "correct_answer": "trece"
@@ -187,7 +187,7 @@
     ]
   },
   {
-    "course_id": 2,
+    "id": "2",
     "course_title": "Arabic for Beginners",
     "target_language": "Arabic",
     "course_level": "Beginner",
@@ -196,7 +196,7 @@
     "userId": ["1", "2"],
     "lessons": [
       {
-        "lesson_id": 1,
+        "id": "1",
         "lesson_title": "Introduction and Greetings",
         "video_url": "https://www.youtube.com/watch?v=xxxxxx",
         "lesson_content": {
@@ -245,19 +245,19 @@
           ],
           "practice_questions": [
             {
-              "id": 1,
+              "id": "1",
               "question": "What's the Arabic word for 'please'?",
               "answer_choices": ["رجاءً", "مرحباً", "شكراً", "لا"],
               "correct_answer": "رجاءً"
             },
             {
-              "id": 2,
+              "id": "2",
               "question": "What's the Arabic word for 'yes'?",
               "answer_choices": ["لا", "نعم", "شكراً", "مع السلامة"],
               "correct_answer": "نعم"
             },
             {
-              "id": 3,
+              "id": "3",
               "question": "What's the Arabic word for 'goodbye'?",
               "answer_choices": ["مع السلامة", "مرحباً", "رجاءً", "لا"],
               "correct_answer": "مع السلامة"
@@ -266,7 +266,7 @@
         }
       },
       {
-        "lesson_id": 2,
+        "id": "2",
         "lesson_title": "Numbers and Counting",
         "video_url": "https://www.youtube.com/watch?v=yyyyyy",
         "lesson_content": {
@@ -336,19 +336,19 @@
           ],
           "practice_questions": [
             {
-              "id": 1,
+              "id": "1",
               "question": "What is the Arabic word for 'one'?",
               "answer_choices": ["واحد", "اثنان", "ثلاثة", "أربعة"],
               "correct_answer": "واحد"
             },
             {
-              "id": 2,
+              "id": "2",
               "question": "What is the Arabic word for 'ten'?",
               "answer_choices": ["خمسة", "ستة", "سبعة", "عشرة"],
               "correct_answer": "عشرة"
             },
             {
-              "id": 3,
+              "id": "3",
               "question": "What is the Arabic word for 'twenty-five'?",
               "answer_choices": [
                 "خمسة و عشرون",
@@ -364,7 +364,7 @@
     ]
   },
   {
-    "course_id": 3,
+    "id": "3",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
@@ -374,7 +374,7 @@
     "lessons": []
   },
   {
-    "course_id": 4,
+    "id": "4",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
@@ -384,7 +384,7 @@
     "lessons": []
   },
   {
-    "course_id": 5,
+    "id": "5",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
@@ -394,7 +394,7 @@
     "lessons": []
   },
   {
-    "course_id": 6,
+    "id": "6",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
@@ -404,7 +404,7 @@
     "lessons": []
   },
   {
-    "course_id": 7,
+    "id": "7",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
@@ -414,7 +414,7 @@
     "lessons": []
   },
   {
-    "course_id": 8,
+    "id": "8",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
@@ -424,7 +424,7 @@
     "lessons": []
   },
   {
-    "course_id": 9,
+    "id": "9",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
@@ -434,7 +434,7 @@
     "lessons": []
   },
   {
-    "course_id": 10,
+    "id": "10",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
@@ -444,7 +444,7 @@
     "lessons": []
   },
   {
-    "course_id": 11,
+    "id": "11",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
@@ -454,7 +454,7 @@
     "lessons": []
   },
   {
-    "course_id": 12,
+    "id": "12",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
@@ -464,7 +464,7 @@
     "lessons": []
   },
   {
-    "course_id": 13,
+    "id": "13",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
@@ -474,7 +474,7 @@
     "lessons": []
   },
   {
-    "course_id": 14,
+    "id": "14",
     "course_title": "Hebrew for Beginners",
     "target_language": "Hebrew",
     "course_level": "Beginner",
