@@ -12,7 +12,7 @@ import LessonPage from "./pages/LessonPage/LessonPage";
 import TranslatePage from "./pages/TranslatePage/TranslatePage";
 import MyCoursesPage from "./pages/MyCoursesPage/MyCoursesPage";
 import ProgressPage from "./pages/ProgressPage/ProgressPage";
-import Courses from "./pages/Courses/Courses";
+import Courses from "./pages/Courses/Courses.jsx";
 import Entry from "./pages/Entry/Entry";
 
 function App() {
