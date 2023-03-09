@@ -27,12 +27,12 @@ function App() {
         </LoginContext>
       ),
       children: [
+        // {
+        //   path: "",
+        //   element: <WelcomePage />,
+        // },
         {
           path: "",
-          element: <WelcomePage />,
-        },
-        {
-          path: "entry",
           element: <Entry />,
         },
         {
