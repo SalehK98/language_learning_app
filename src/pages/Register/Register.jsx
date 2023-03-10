@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
-import React, { useState, useContext, useRef } from "react";
+import React, { useState, useContext, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import classes from "./Register.module.css";
 import { MyLoginContext } from "../../components/LoginContext/LoginContext";
@@ -17,6 +17,13 @@ export default function Register() {
   const [loading, setLoading] = useState(false);
   const [variant, setVariant] = useState("contained");
 
+  const [logged, setLogged] = useState(false);
+  useEffect(() => {
+    if (logged) {
+      navigate("/dashBoard");
+    }
+  });
+
   const myUser = useRef({});
 
   const navigate = useNavigate();
@@ -26,67 +33,89 @@ export default function Register() {
     localStorage.getItem("loginInfo")
   );
 
+  const CssTextField = {
+    "& label.Mui-focused": {
+      color: "#000",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "#CBE4DE",
+    },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "#CBE4DE",
+      },
+      "&:hover fieldset": {
+        borderColor: "#CBE4DE",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "#CBE4DE",
+      },
+    },
+  };
+
   return (
     <>
-      {isLogged ? (
+      {/* {isLogged ? (
         navigate("/dashBoard")
-      ) : (
-        <div className={classes.register}>
-          <div className={classes.register_container}>
-            <h1>Register</h1>
-            <form
-              className={classes.register_form}
-              onSubmit={(event) => {
-                event.preventDefault();
-              }}
-            >
-              <label>
-                <TextField
-                  required={emailTextFieldTypeRequired}
-                  error={!emailTextFieldTypeRequired}
-                  id="outlined-required-register-email"
-                  label="email"
-                  size="small"
-                  helperText={emailHelperText}
-                  type="email"
-                  onChange={(event) => {
-                    myUser.current = {
-                      ...myUser.current,
-                      ...{ email: event.target.value },
-                    };
-                  }}
-                  onfocus={(event) => {
-                    setEmailTextFieldTypeRequired(true);
-                    setPasswordTextFieldTypeRequired(true);
-                    setEmailHelperText("");
-                    setPasswordHelperText("");
-                  }}
-                />
-              </label>
-              <label>
-                <TextField
-                  required={passwordTextFieldTypeRequired}
-                  error={!passwordTextFieldTypeRequired}
-                  id="outlined-required-register-password"
-                  label="password"
-                  size="small"
-                  helperText={passwordHelperText}
-                  type="password"
-                  onChange={(event) => {
-                    myUser.current = {
-                      ...myUser.current,
-                      ...{ password: event.target.value },
-                    };
-                  }}
-                  onFocus={(event) => {
-                    setEmailTextFieldTypeRequired(true);
-                    setPasswordTextFieldTypeRequired(true);
-                    setEmailHelperText("");
-                    setPasswordHelperText("");
-                  }}
-                />
-              </label>
-              {/* <label>
+      ) : ( */}
+      <div className={classes.register}>
+        <div className={classes.register_container}>
+          <h1>Register</h1>
+          <form
+            className={classes.register_form}
+            onSubmit={(event) => {
+              event.preventDefault();
+            }}
+          >
+            <label>
+              <TextField
+                required={emailTextFieldTypeRequired}
+                error={!emailTextFieldTypeRequired}
+                id="outlined-required-register-email"
+                label="email"
+                size="small"
+                helperText={emailHelperText}
+                type="email"
+                onChange={(event) => {
+                  myUser.current = {
+                    ...myUser.current,
+                    ...{ email: event.target.value },
+                  };
+                }}
+                onFocus={(event) => {
+                  setEmailHelperText("");
+                  setPasswordHelperText("");
+                  setEmailTextFieldTypeRequired(true);
+                  setPasswordTextFieldTypeRequired(true);
+                }}
+                sx={CssTextField}
+              />
+            </label>
+            <label>
+              <TextField
+                required={passwordTextFieldTypeRequired}
+                error={!passwordTextFieldTypeRequired}
+                id="outlined-required-register-password"
+                label="password"
+                size="small"
+                helperText={passwordHelperText}
+                type="password"
+                onChange={(event) => {
+                  myUser.current = {
+                    ...myUser.current,
+                    ...{ password: event.target.value },
+                  };
+                }}
+                onFocus={(event) => {
+                  setEmailTextFieldTypeRequired(true);
+                  setPasswordTextFieldTypeRequired(true);
+                  setEmailHelperText("");
+                  setPasswordHelperText("");
+                }}
+                sx={CssTextField}
+              />
+            </label>
+            {/* <label>
                 name{" "}
                 <input
                   type="text"
@@ -112,30 +141,31 @@ export default function Register() {
                   }}
                 />
               </label> */}
-              <LoadingButton
-                loading={loading}
-                variant={variant}
-                disabled={loading}
-                onClick={() => {
-                  console.log("myUSer from register ", myUser.current);
-                  inputHandler(
-                    myUser.current,
-                    setIsData,
-                    setPasswordTextFieldTypeRequired,
-                    setEmailTextFieldTypeRequired,
-                    setEmailHelperText,
-                    setPasswordHelperText,
-                    setVariant,
-                    setLoading
-                  );
-                }}
-              >
-                Sign up
-              </LoadingButton>
-            </form>
-          </div>
+            <LoadingButton
+              loading={loading}
+              variant={variant}
+              disabled={loading}
+              onClick={() => {
+                console.log("myUSer from register ", myUser.current);
+                inputHandler(
+                  myUser.current,
+                  setIsData,
+                  setPasswordTextFieldTypeRequired,
+                  setEmailTextFieldTypeRequired,
+                  setEmailHelperText,
+                  setPasswordHelperText,
+                  setVariant,
+                  setLoading,
+                  setLogged
+                );
+              }}
+            >
+              Sign up
+            </LoadingButton>
+          </form>
         </div>
-      )}
+      </div>
+      {/* )} */}
     </>
   );
 }

@@ -30,27 +30,27 @@ const login = (
   // user2,
   setIsData
 ) => {
-  signInWithEmailAndPassword(auth, email, password)
+  const cb = signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
       console.log("user", user);
       // setIsLogged(true);
       setIsData(true);
-      localStorage.setItem(
-        "loginInfo",
-        JSON.stringify({ isLogged: true, user: user.email, userId: user.uid })
-      );
-      // setUser(user);
-      // ...
-      // return user ? true : false;
+      // localStorage.setItem(
+      //   "loginInfo",
+      //   JSON.stringify({ isLogged: true, user: user.email, userId: user.uid })
+      // );
+      return [user.email, user.uid];
     })
     .catch((error) => {
       const errorCode = error.code;
-      const errorMessage = error.message;
+      // const errorMessage = error.message;
       console.log("errorCode", errorCode);
-      console.log("errorMessage", errorMessage);
+      // console.log("errorMessage", errorMessage);
+      return errorCode;
     });
+  return cb;
 };
 
 const signUp = (
@@ -65,8 +65,12 @@ const signUp = (
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      console.log(user);
-      login(email, password, setIsData);
+      console.log("this is the create", user);
+      const cb2 = async () => {
+        const cb3 = await login(email, password, setIsData);
+        return cb3;
+      };
+      return cb2();
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -83,7 +87,7 @@ const logOut = (setIsData, setIsLogged, setUser) => {
       // Sign-out successful.
       // setIsLogged(false);
       // setUser(null);
-      setIsData(true);
+      // setIsData(true);
       localStorage.setItem(
         "loginInfo",
         JSON.stringify({ isLogged: false, user: "", userId: "" })

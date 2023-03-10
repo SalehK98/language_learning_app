@@ -31,15 +31,8 @@
   /* width: 100%; */
   height: 40%;
 }
-/* 
-label {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 1rem;
-} */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .login_container {
     width: 100%;
     height: 100%;
@@ -53,5 +46,13 @@ label {
     border-radius: 15px;
     color: white;
     margin: auto;
+  }
+  .login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* width: 100%; */
+    height: 70%;
   }
 }

@@ -1,4 +1,4 @@
-import { signUp } from "../../database/firebase.mjs";
+import { login } from "../../database/firebase.mjs";
 
 function inputHandler(
   myUser,
@@ -11,20 +11,11 @@ function inputHandler(
   setLoading,
   setLogged
 ) {
+  console.log("from login helper", myUser);
   const { email, password } = myUser;
-  const signUP = signUp(email, password, setIsData);
-  setVariant("outlined");
-  setLoading(true);
-  signUP.then((res) => {
+  const _login = login(email, password, setIsData);
+  _login.then((res) => {
     switch (res) {
-      case "auth/missing-email":
-        setEmailTextFieldTypeRequired(false);
-        setPasswordTextFieldTypeRequired(false);
-        setEmailHelperText("InValid Email or Password");
-        setPasswordHelperText("InValid Email or Password");
-        setLoading(false);
-        setVariant("contained");
-        break;
       case "auth/internal-error":
         setEmailTextFieldTypeRequired(false);
         setPasswordTextFieldTypeRequired(false);
@@ -41,11 +32,19 @@ function inputHandler(
         setLoading(false);
         setVariant("contained");
         break;
-      case "auth/weak-password":
-        // setEmailTextFieldTypeRequired(false)
+      case "auth/wrong-password":
+        //   setEmailTextFieldTypeRequired(false)
         setPasswordTextFieldTypeRequired(false);
         // setEmailHelperText("Password must be 6 or more characters");
-        setPasswordHelperText("Password must be 6 or more characters");
+        setPasswordHelperText("Wrong Password");
+        setLoading(false);
+        setVariant("contained");
+        break;
+      case "auth/user-not-found":
+        setEmailTextFieldTypeRequired(false);
+        setPasswordTextFieldTypeRequired(false);
+        setEmailHelperText("invalid Email or Password");
+        setPasswordHelperText("invalid Email or Password");
         setLoading(false);
         setVariant("contained");
         break;
@@ -58,7 +57,6 @@ function inputHandler(
         setVariant("contained");
         break;
       default:
-        console.log(res);
         if (Array.isArray(res)) {
           const [email, id] = res;
           localStorage.setItem(
@@ -71,6 +69,7 @@ function inputHandler(
           setLoading(false);
           setVariant("contained");
         }
+        console.log(res);
     }
   });
 }
