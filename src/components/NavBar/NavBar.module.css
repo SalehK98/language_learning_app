@@ -1,10 +1,48 @@
-nav {
+.nav1 {
   /* background-color: red; */
-  background-color: white;
+  /* background-color: white; */
   margin: 0;
   padding: 0;
   position: fixed;
   width: 100%;
+  opacity: 1;
+  background-color: transparent;
+  animation: exit 200ms ease-in-out;
+}
+
+@keyframes exit {
+  from {
+    background-color: white;
+    opacity: 0.8;
+  }
+  to {
+    background-color: transparent;
+    opacity: 1;
+  }
+}
+
+.nav2 {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  background-color: white;
+  animation: 200ms enter ease-in-out;
+}
+
+@keyframes enter {
+  from {
+    background-color: transparent;
+    opacity: 1;
+  }
+
+  to {
+    background-color: white;
+    opacity: 0.8;
+  }
 }
 
 ul {

@@ -65,6 +65,7 @@ export default function TranslatePage() {
               rows="10"
               autoFocus={!loading}
               maxLength="450"
+              ref={input}
               onChange={(event) => {
                 input.current = event.target.value;
               }}
@@ -79,7 +80,6 @@ export default function TranslatePage() {
           variant={variant}
           onClick={translate}
           disabled={loading}
-          ref={input}
         >
           <span>translate</span>
         </LoadingButton>

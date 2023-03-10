@@ -1,4 +1,4 @@
-import { Button, Input } from "@mui/material";
+import { Button, Input, TextField } from "@mui/material";
 import React, { useState, useEffect, useContext } from "react";
 import classes from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,7 @@ export default function Login() {
   const [isData, setIsData] = useState("");
   const navigate = useNavigate();
   const { isLogged, setIsLogged, user, setUser } = useContext(MyLoginContext);
+  const color = "coral";
 
   function loginHandler() {
     login(email, password, setIsLogged, setUser, isLogged, user, setIsData);
@@ -32,14 +33,16 @@ export default function Login() {
               onSubmit={(e) => {
                 e.preventDefault();
               }}
-              style={{ display: "flex", flexDirection: "column" }}
+              className={classes.login_form}
             >
               <label>
-                Email{" "}
-                <Input
-                  variant="outlined"
-                  // color="white"
+                <TextField
+                  required
+                  id="outlined-required-login-email"
+                  label="Email"
                   type="email"
+                  size="small"
+                  color="success"
                   onChange={(event) => {
                     setEmail(event.target.value);
                   }}
@@ -47,8 +50,11 @@ export default function Login() {
                 />
               </label>
               <label>
-                Password{" "}
-                <input
+                <TextField
+                  required
+                  id="outlined-required-login-password"
+                  label="Password"
+                  size="small"
                   type="password"
                   onChange={(event) => {
                     setPassword(event.target.value);

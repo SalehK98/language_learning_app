@@ -24,10 +24,10 @@ const auth = getAuth(firebaseConfig);
 const login = (
   email,
   password,
-  setIsLogged,
-  setUser,
-  isLogged,
-  user2,
+  // setIsLogged,
+  // setUser,
+  // isLogged,
+  // user2,
   setIsData
 ) => {
   signInWithEmailAndPassword(auth, email, password)
@@ -56,31 +56,25 @@ const login = (
 const signUp = (
   email,
   password,
-  setIsLogged,
-  setUser,
-  isLogged,
-  newUser,
+  // setIsLogged,
+  // setUser,
+  // isLogged,
   setIsData
 ) => {
-  console.log("newuser from signup", newUser);
-  // const { email, password, name, phoneNumber } = newUser;
-  createUserWithEmailAndPassword(auth, email, password)
+  const cb = createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
       console.log(user);
-      login(email, password, setIsLogged, setUser, isLogged, user, setIsData);
-      // ...
-      // console.log("cb2", cb);
-      // return cb;
+      login(email, password, setIsData);
     })
     .catch((error) => {
       const errorCode = error.code;
-      const errorMessage = error.message;
+      // const errorMessage = error.message;
       console.log("errorCode", errorCode);
-      console.log("errorMessage", errorMessage);
-      // ..
+      return errorCode;
     });
+  return cb;
 };
 
 const logOut = (setIsData, setIsLogged, setUser) => {

@@ -30,7 +30,7 @@ export default function Entry() {
                   <>
                     <div>
                       <h1>Hi There</h1>
-                      <p> Login here and Continue to have fun.</p>
+                      <p> Login here.</p>
                     </div>
                     <div
                       style={{
@@ -55,7 +55,7 @@ export default function Entry() {
                   <>
                     <div>
                       <h1>Start Fresh and Register Here</h1>
-                      <p>join us and start your journey.</p>
+                      <p>join us.</p>
                     </div>
                     <div
                       style={{
