@@ -77,8 +77,15 @@ export default function NavBar() {
       {isLogged ? (
         <>
           <div className={classes.nav_nav}>
-            <div>
-              <h1>NewLang</h1>
+            <div style={{ paddingBottom: "15px", cursor: "default" }}>
+              <h1
+                onClick={() => {
+                  navigate("/dashBoard");
+                }}
+                style={{ cursor: "default" }}
+              >
+                NewLang
+              </h1>
             </div>
             <div className={classes.nav_div_ul}>
               <ul className={classes.nav_ul}>
@@ -221,8 +228,8 @@ export default function NavBar() {
           </Menu>
         </>
       ) : (
-        <div className={classes.nav_nav}>
-          <div>
+        <div className={classes.nav_navLog}>
+          <div style={{ paddingBottom: "5px" }}>
             <h1>NewLang</h1>
           </div>
         </div>
