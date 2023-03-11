@@ -30,7 +30,18 @@ export default function NavBar() {
     localStorage.getItem("loginInfo")
   );
 
-  const [logNav, setLogNav] = useState(isLogged);
+  const getUserAvatar = () => {
+    if (user) {
+      if (user.split("@").length > 0) {
+        const newAv = user.split("@")[0][0];
+        return newAv;
+      }
+      return user;
+    }
+    return user;
+  };
+
+  const newAvName = getUserAvatar();
 
   const onScroll = () => {
     if (window.scrollY >= 1) {
@@ -126,7 +137,7 @@ export default function NavBar() {
                 aria-haspopup="true"
                 aria-expanded={open ? "true" : undefined}
               >
-                <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+                <Avatar sx={{ width: 32, height: 32 }}>{newAvName}</Avatar>
               </IconButton>
             </Tooltip>
           </div>
