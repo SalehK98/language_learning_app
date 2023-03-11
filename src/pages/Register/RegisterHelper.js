@@ -9,9 +9,16 @@ function inputHandler(
   setPasswordHelperText,
   setVariant,
   setLoading,
-  setLogged
+  setLogged,
+  setNameRequired,
+  setNameHelperText
 ) {
-  const { email, password } = myUser;
+  const { email, password, name } = myUser;
+  if (!name) {
+    setNameRequired(false);
+    setNameHelperText("please enter a name");
+    return;
+  }
   const signUP = signUp(email, password, setIsData);
   setVariant("outlined");
   setLoading(true);
@@ -60,11 +67,12 @@ function inputHandler(
       default:
         console.log(res);
         if (Array.isArray(res)) {
-          const [email, id] = res;
+          const [email1, id] = res;
           localStorage.setItem(
             "loginInfo",
-            JSON.stringify({ isLogged: true, user: email, userId: id })
+            JSON.stringify({ isLogged: true, user: email1, userId: id })
           );
+          addToMockUsers(id, name, email1);
           setLogged(true);
         } else {
           alert("something went wrong");
@@ -72,6 +80,22 @@ function inputHandler(
           setVariant("contained");
         }
     }
+  });
+}
+
+function addToMockUsers(id, name, email) {
+  const newUSER = {
+    id: id,
+    name: name,
+    email: email,
+    courses: [],
+  };
+  fetch("https://6405b55440597b65de3e8d49.mockapi.io/language/users", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newUSER),
   });
 }
 

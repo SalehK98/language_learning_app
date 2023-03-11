@@ -14,6 +14,8 @@ export default function Register() {
     useState(true);
   const [emailHelperText, setEmailHelperText] = useState();
   const [passwordHelperText, setPasswordHelperText] = useState();
+  const [nameRequired, setNameRequired] = useState(true);
+  const [nameHelperText, setNameHelperText] = useState();
   const [loading, setLoading] = useState(false);
   const [variant, setVariant] = useState("contained");
 
@@ -67,6 +69,28 @@ export default function Register() {
               event.preventDefault();
             }}
           >
+            <label>
+              <TextField
+                required={nameRequired}
+                error={!nameRequired}
+                id="outlined-required-register-name"
+                label="name"
+                size="small"
+                helperText={nameHelperText}
+                type="text"
+                onChange={(event) => {
+                  myUser.current = {
+                    ...myUser.current,
+                    ...{ name: event.target.value },
+                  };
+                }}
+                onFocus={(event) => {
+                  setNameHelperText("");
+                  setNameRequired(true);
+                }}
+                sx={CssTextField}
+              />
+            </label>
             <label>
               <TextField
                 required={emailTextFieldTypeRequired}
@@ -156,7 +180,9 @@ export default function Register() {
                   setPasswordHelperText,
                   setVariant,
                   setLoading,
-                  setLogged
+                  setLogged,
+                  setNameRequired,
+                  setNameHelperText
                 );
               }}
             >

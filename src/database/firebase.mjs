@@ -87,7 +87,7 @@ const logOut = (setIsData, setIsLogged, setUser) => {
       // Sign-out successful.
       // setIsLogged(false);
       // setUser(null);
-      // setIsData(true);
+      setIsData(true);
       localStorage.setItem(
         "loginInfo",
         JSON.stringify({ isLogged: false, user: "", userId: "" })
