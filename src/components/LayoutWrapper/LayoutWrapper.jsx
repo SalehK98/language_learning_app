@@ -4,10 +4,10 @@ import { logOut } from "../../database/firebase.mjs";
 // import LoginContext from "../LoginContext/LoginContext";
 import NavBar from "../NavBar/NavBar";
 
-// localStorage.setItem(
-//   "loginInfo",
-//   JSON.stringify({ isLogged: false, user: "", userId: "" })
-// );
+localStorage.setItem(
+  "loginInfo",
+  JSON.stringify({ isLogged: false, user: "", userId: "" })
+);
 
 export default function LayoutWrapper() {
   const [isData, setIsData] = useState(false);
