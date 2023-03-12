@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { logOut } from "../../database/firebase.mjs";
 // import LoginContext from "../LoginContext/LoginContext";
@@ -9,9 +9,9 @@ import NavBar from "../NavBar/NavBar";
 //   JSON.stringify({ isLogged: false, user: "", userId: "" })
 // );
 
-logOut();
-
 export default function LayoutWrapper() {
+  const [isData, setIsData] = useState(false);
+  logOut(setIsData);
   return (
     // <LoginContext>
     <>

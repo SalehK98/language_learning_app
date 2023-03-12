@@ -17,7 +17,11 @@ export default function CoursePage() {
   const [users, setUsers] = useState(null);
 
   const params = useParams();
-  const { isLogged, setIsLogged, user, setUser } = useContext(MyLoginContext);
+  // const { isLogged, setIsLogged, user, setUser } = useContext(MyLoginContext);
+
+  const { isLogged, user, userId } = JSON.parse(
+    localStorage.getItem("loginInfo")
+  );
 
   useEffect(() => {
     const data = getData(
@@ -37,12 +41,31 @@ export default function CoursePage() {
     const users = getData(
       setError2,
       error2,
-      "https://6405b55440597b65de3e8d49.mockapi.io/language/users"
+      `https://6405b55440597b65de3e8d49.mockapi.io/language/users/${userId}`
     );
     users.then((result) => {
       if (!error2) {
         setUsers(result);
         setIsData2(true);
+
+        //     const drawCourses = () => {
+        //       const myCourse = users.course.filter((course) => {
+        //         return course.id === params.courseId;
+        //       });
+        //       console.log(myCourse);
+        //       //   const myCourses = users.courses.map((course) => {
+        //       //     return course.id;
+        //       //   });
+        //       //   return courses
+        //       //     .filter((course) => {
+        //       //       return myCourses.includes(course.id);
+        //       //     })
+        //       //     .map((course) => {
+        //       //       console.log("1");
+        //       //       return <CourseCard course={course} user={users} key={course.id} />;
+        //       //     });
+        //     };
+        //     drawCourses();
       }
     });
   }, []);
@@ -52,7 +75,6 @@ export default function CoursePage() {
       to="/dashBoard/myCoursesPage"
       underline="underline"
       key="2"
-      // color="#0D2F4E"
       style={{ textDecoration: "none", color: "#0D2F4E" }}
     >
       My Courses
@@ -86,24 +108,15 @@ export default function CoursePage() {
                 </Breadcrumbs>
               </div>
               <div className={classes.coursePage_info}>
-                {/* <div style={{ display: "flex", alignSelf: "center" }}>
-                  <h1>{course.course_title}</h1>
-                </div> */}
-
                 <div
                   style={{
-                    // border: "1px solid black",
-                    // padding: "15px",
-                    // borderRadius: "10px",
                     display: "flex",
-                    // alignSelf: "flex-end",
                     width: "300px",
                     justifyContent: "space-between",
                   }}
                 >
                   <p
                     style={{
-                      // border: "1px solid black",
                       padding: "15px",
                       borderRadius: "10px",
                       backgroundColor: "white",
@@ -113,7 +126,6 @@ export default function CoursePage() {
                   </p>
                   <p
                     style={{
-                      // border: "1px solid black",
                       padding: "15px",
                       borderRadius: "10px",
                       backgroundColor: "white",

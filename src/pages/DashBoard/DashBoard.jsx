@@ -70,7 +70,13 @@ export default function Home() {
             <div className={classes.home}>
               <div className={classes.home_container}>
                 <div className={classes.home_hello}>
-                  <h1>Hello {name} Welcome Back</h1>
+                  <h1>
+                    Hello &nbsp;
+                    <span>
+                      <em> {name} </em>{" "}
+                    </span>
+                    &nbsp; Welcome Back
+                  </h1>
                 </div>
                 <div className={classes.home_info}>
                   <div className={classes.home_myCourses}>
