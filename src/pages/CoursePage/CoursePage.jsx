@@ -49,7 +49,7 @@ export default function CoursePage() {
 
   const breadcrumbs = [
     <Link
-      to="/dashBoard/myCourses"
+      to="/dashBoard/myCoursesPage"
       underline="underline"
       key="2"
       // color="#0D2F4E"
