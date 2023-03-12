@@ -4,6 +4,7 @@ import { getData } from "../../database/getData.mjs";
 import Progress from "../Progress/Progress";
 import { MyLoginContext } from "../../components/LoginContext/LoginContext";
 import MyCourses from "./MyCourses/MyCourses";
+import MyProgress from "./MyProgress/MyProgress";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
@@ -32,9 +33,7 @@ export default function Home() {
         setIsData(true);
       }
     });
-  }, []);
 
-  useEffect(() => {
     const user = getData(
       setError2,
       error2,
@@ -48,6 +47,19 @@ export default function Home() {
     });
   }, []);
 
+  const getUserAvatar = () => {
+    if (myUser) {
+      // if (user.split("@").length > 0) {
+      //   const newAv = user.split("@")[0];
+      //   return newAv;
+      // }
+      return myUser.name;
+    }
+    return user;
+  };
+
+  const name = getUserAvatar();
+
   return (
     <>
       {isLogged ? (
@@ -57,11 +69,19 @@ export default function Home() {
           ) : (
             <div className={classes.home}>
               <div className={classes.home_container}>
-                <MyCourses courses={courses} user={myUser} />
-                <hr width="90%" />
-                <h1>my progress</h1>
-                <div className={classes.home_myProgress}>
-                  <Progress user={myUser} />
+                <div className={classes.home_hello}>
+                  <h1>Hello {name} Welcome Back</h1>
+                </div>
+                <div className={classes.home_info}>
+                  <div className={classes.home_myCourses}>
+                    <MyCourses courses={courses} user={myUser} />
+                  </div>
+                  {/* <hr width="90%" /> */}
+                  <br />
+                  <div className={classes.home_myProgress}>
+                    {/* <Progress user={myUser} /> */}
+                    <MyProgress />
+                  </div>
                 </div>
               </div>
             </div>

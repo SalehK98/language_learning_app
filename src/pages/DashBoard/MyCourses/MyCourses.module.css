@@ -1,26 +1,42 @@
 .myCourses {
   width: 100%;
-  /* height: 50%; */
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   /* margin: auto; */
+  color: black;
 }
 
 .myCourses_courseNav {
   width: 90%;
+  /* margin-left: 5.1vw; */
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  margin: 0 auto;
+  text-align: center;
+  margin: auto;
+  /* background-color: aqua; */
+  /* gap: 10rem; */
+}
+
+.myCourses_courseNav h3 {
+  display: flex;
+  align-self: flex-start;
+  width: 18vw;
+  font-size: 1.9vw;
+  /* // margin: auto */
+  color: black;
+  /* border-bottom: 2px solid black; */
+  margin-bottom: 2vh;
 }
 
 .myCourses_activeCourses {
   display: grid;
   /* display: flex; */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  /* grid-template-rows: repeat(auto, 2fr); */
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  /* grid-template-rows: repeat(auto, 500px); */
   /* grid-template-columns: repeat(auto, 2fr); */
   gap: 1rem;
   width: 90%;
@@ -28,4 +44,29 @@
   height: 35%;
   justify-content: space-around;
   /* background-color: rebeccapurple; */
+}
+
+@media screen and (max-width: 500px) {
+  .myCourses_courseNav h3 {
+    width: 45vw;
+    font-size: 5vw;
+    position: fixed;
+    right: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .myCourses_activeCourses {
+    display: grid;
+    /* display: flex; */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* grid-template-rows: repeat(auto, 500px); */
+    /* grid-template-columns: repeat(auto, 2fr); */
+    gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    height: 35%;
+    justify-content: space-around;
+    /* background-color: rebeccapurple; */
+  }
 }

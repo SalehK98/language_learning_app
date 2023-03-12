@@ -52,17 +52,15 @@ export default function TranslatePage() {
             ref={inputLang}
             className={classes.translatePage_langList}
           >
-            <option value="en">english</option>
-            <option value="ar">arabic</option>
-            <option value="es">spanish</option>
-            <option value="he">hebrew</option>
-            <option value="ru">russian</option>
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+            <option value="es">Spanish</option>
+            <option value="he">Hebrew</option>
+            <option value="ru">Russian</option>
           </select>
 
           <label>
             <textarea
-              cols="60"
-              rows="10"
               autoFocus={!loading}
               maxLength="450"
               ref={input}
@@ -80,6 +78,11 @@ export default function TranslatePage() {
           variant={variant}
           onClick={translate}
           disabled={loading}
+          sx={{
+            // marginBottom: 50,
+            marginRight: 2,
+            marginLeft: 2,
+          }}
         >
           <span>translate</span>
         </LoadingButton>
@@ -92,16 +95,14 @@ export default function TranslatePage() {
             ref={outputLang}
             className={classes.translatePage_langList}
           >
-            <option value="ar">arabic</option>
-            <option value="en">english</option>
-            <option value="es">spanish</option>
-            <option value="he">hebrew</option>
-            <option value="ru">russian</option>
+            <option value="ar">Arabic</option>
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="he">Hebrew</option>
+            <option value="ru">Russian</option>
           </select>
           <label>
             <textarea
-              cols="60"
-              rows="10"
               maxLength="450"
               readOnly
               autoFocus={loading}

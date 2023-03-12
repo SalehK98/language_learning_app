@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* justify-content: center; */
   width: 80%;
   border: transparent;
+  /* justify-content: center; */
   margin-top: 15px;
   height: 5vh;
   font-size: 1.6vw;
@@ -13,7 +13,7 @@
 
 .nav_navLog {
   opacity: 0.7;
-  background-color: white;
+  background-color: rgb(210, 210, 210);
   width: 20vw;
   border: transparent;
   border-radius: 5px;
@@ -24,6 +24,7 @@
   height: 8vh;
   font-size: 2vw;
   text-align: center;
+  font-family: cursive;
 }
 
 .nav_div_ul {
@@ -38,7 +39,7 @@
 }
 
 .nav_ul a {
-  color: #041e42;
+  color: #000b1a;
   text-decoration: none;
 }
 
@@ -70,8 +71,9 @@
 
 @keyframes exit {
   from {
-    background-color: white;
-    opacity: 0.8;
+    background-color: rgb(48, 47, 47);
+    opacity: 1;
+    color: white;
   }
   to {
     background-color: transparent;
@@ -89,9 +91,10 @@
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.8;
-  background-color: white;
+  opacity: 1;
+  background-color: rgb(48, 47, 47);
   animation: 200ms enter ease-in-out;
+  color: white;
 }
 
 @keyframes enter {
@@ -101,8 +104,9 @@
   }
 
   to {
-    background-color: white;
-    opacity: 0.8;
+    background-color: rgb(48, 47, 47);
+    opacity: 1;
+    color: white;
   }
 }
 
@@ -115,7 +119,7 @@ ul {
 @media screen and (max-width: 500px) {
   .nav_navLog {
     opacity: 0.7;
-    background-color: white;
+    background-color: rgb(48, 47, 47);
     width: 50vw;
     border: transparent;
     border-radius: 5px;
@@ -126,5 +130,6 @@ ul {
     height: 9vh;
     font-size: 5vw;
     text-align: center;
+    color: white;
   }
 }

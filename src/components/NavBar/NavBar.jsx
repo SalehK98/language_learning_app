@@ -19,6 +19,7 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import SchoolIcon from "@mui/icons-material/School";
 import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
+// import "https://fonts.googleapis.com/css?family=Pacifico";
 
 export default function NavBar() {
   const navigate = useNavigate();
@@ -93,7 +94,7 @@ export default function NavBar() {
                 onClick={() => {
                   navigate("/dashBoard");
                 }}
-                style={{ cursor: "default" }}
+                style={{ cursor: "default", fontFamily: "cursive" }}
               >
                 NewLang
               </h1>
@@ -113,7 +114,7 @@ export default function NavBar() {
                   Browse
                 </NavLink>
                 <NavLink
-                  to="/translate"
+                  to="/connect"
                   style={({ isActive }) => (isActive ? activeStyle : undefined)}
                 >
                   Community

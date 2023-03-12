@@ -1,6 +1,6 @@
 [
   {
-    "id": " 1",
+    "id": "rkEAYsunTEPr6WY6IT4i64zTtxJ3",
     "name": "123456",
     "email": "123456@gmail.com",
     "courses": [
@@ -149,6 +149,183 @@
             "completed": true
           }
         ]
+      },
+      {
+        "id": "3",
+        "name": "Hebrew for Beginners",
+        "completed": false,
+        "progress": []
+      },
+      {
+        "id": "4",
+        "name": "Hebrew for Beginners",
+        "completed": false,
+        "progress": []
+      }
+    ]
+  },
+  {
+    "id": "d8f0FoLgYfeNc75uS5uAU3EFWfB3",
+    "name": "Saleh Kalouti",
+    "email": "salehkalouti@gmail.com",
+    "courses": [
+      {
+        "id": "1",
+        "name": "Spanish for Beginners",
+        "completed": false,
+        "progress": [
+          {
+            "lesson_id": "1",
+            "exercises": [
+              {
+                "id": "1",
+                "status": "completed"
+              },
+              {
+                "id": "2",
+                "status": "in_progress"
+              },
+              {
+                "id": "3",
+                "status": "not_started"
+              }
+            ],
+            "quiz": {
+              "id": "1",
+              "status": "not_started"
+            },
+            "completed": false
+          },
+          {
+            "lesson_id": "2",
+            "exercises": [
+              {
+                "id": "1",
+                "status": "completed"
+              },
+              {
+                "id": "2",
+                "status": "completed"
+              },
+              {
+                "id": "3",
+                "status": "in_progress"
+              }
+            ],
+            "quiz": {
+              "id": "1",
+              "status": "not_started"
+            },
+            "completed": false
+          },
+          {
+            "lesson_id": "3",
+            "exercises": [
+              {
+                "id": "1",
+                "status": "in_progress"
+              },
+              {
+                "id": "2",
+                "status": "not_started"
+              },
+              {
+                "id": "3",
+                "status": "not_started"
+              }
+            ],
+            "quiz": {
+              "id": "1",
+              "status": "not_started"
+            },
+            "completed": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "name": "Arabic for Beginners",
+        "completed": false,
+        "progress": [
+          {
+            "lesson_id": "1",
+            "exercises": [
+              {
+                "id": "1",
+                "status": "not_started"
+              },
+              {
+                "id": "2",
+                "status": "in_progress"
+              },
+              {
+                "id": "3",
+                "status": "completed"
+              }
+            ],
+            "quiz": {
+              "id": "1",
+              "status": "not_started"
+            },
+            "completed": false
+          },
+          {
+            "lesson_id": "2",
+            "exercises": [
+              {
+                "id": "1",
+                "status": "completed"
+              },
+              {
+                "id": "2",
+                "status": "completed"
+              },
+              {
+                "id": "3",
+                "status": "completed"
+              }
+            ],
+            "quiz": {
+              "id": "1",
+              "status": "not_started"
+            },
+            "completed": true
+          },
+          {
+            "lesson_id": "3",
+            "exercises": [
+              {
+                "id": "1",
+                "status": "completed"
+              },
+              {
+                "id": "2",
+                "status": "completed"
+              },
+              {
+                "id": "3",
+                "status": "completed"
+              }
+            ],
+            "quiz": {
+              "id": "1",
+              "status": "completed"
+            },
+            "completed": true
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "name": "Hebrew for Beginners",
+        "completed": false,
+        "progress": []
+      },
+      {
+        "id": "4",
+        "name": "Hebrew for Beginners",
+        "completed": false,
+        "progress": []
       }
     ]
   }

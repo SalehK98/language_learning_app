@@ -3,7 +3,8 @@
   padding-top: 60px;
   width: 100%;
   height: 100vh;
-  background-color: rgb(196, 127, 196);
+  /* background-color: #f8f8f8; */
+  background: linear-gradient(to bottom right, gray, white);
   /* background: url(../../assets/images/background1-medium.jpg) no-repeat center
         center/cover; */
 }
@@ -21,8 +22,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  height: 30vh;
   /* padding-left: 50px; */
+  padding-top: 5vh;
 }
 
 .coursePage_lessons {

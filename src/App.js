@@ -14,6 +14,7 @@ import MyCoursesPage from "./pages/MyCoursesPage/MyCoursesPage";
 import ProgressPage from "./pages/ProgressPage/ProgressPage";
 import Courses from "./pages/Courses/Courses.jsx";
 import Entry from "./pages/Entry/Entry";
+import Connect from "./components/Connect/Connect";
 
 function App() {
   const status = JSON.parse(localStorage.getItem("loginInfo"));
@@ -74,6 +75,10 @@ function App() {
         {
           path: "translate",
           element: <TranslatePage />,
+        },
+        {
+          path: "connect",
+          element: <Connect />,
         },
       ],
     },

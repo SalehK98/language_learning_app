@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import classes from "../DashBoard/DashBoard.module.css";
+import classes from "./Courses.module.css";
 import { getData } from "../../database/getData.mjs";
 import CourseCard from "../../components/CourseCard/CourseCard";
 import { useNavigate } from "react-router-dom";
@@ -39,10 +39,10 @@ export default function Courses() {
       {isLogged ? (
         isData ? (
           error1 ? (
-            <div className={classes.home}>error</div>
+            <div className={classes.courses}>error</div>
           ) : (
-            <div className={classes.home}>
-              <div className={classes.home_container}>
+            <div className={classes.courses}>
+              <div className={classes.courses_container}>
                 {drawCourses(courses)}
               </div>
             </div>

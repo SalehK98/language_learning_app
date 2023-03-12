@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./CourseCard.module.css";
-import { BsFillArrowRightSquareFill } from "react-icons/bs";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 
@@ -18,9 +18,10 @@ export default function CourseCard({ course, user }) {
     <div className={classes.courseCard}>
       <div className={classes.courseCard_title}>
         <h1>{course_title}</h1>
-        <BsFillArrowRightSquareFill
+        <br />
+        <AiOutlineArrowRight
           size="1.5rem"
-          color="teal"
+          // color="teal"
           style={{ cursor: "pointer" }}
           onClick={() => {
             navigate(`/courses/` + id + `?x=${encodeURI(course_title)}`, {

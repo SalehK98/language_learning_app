@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import classes from "./CoursePage.module.css";
 import { getData } from "../../database/getData.mjs";
 import { MyLoginContext } from "../../components/LoginContext/LoginContext";
 import Lessons from "./Lessons/Lessons";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import { Typography } from "@mui/material";
 
 export default function CoursePage() {
   const [isData, setIsData] = useState(false);
@@ -44,6 +47,21 @@ export default function CoursePage() {
     });
   }, []);
 
+  const breadcrumbs = [
+    <Link
+      to="/dashBoard/myCourses"
+      underline="underline"
+      key="2"
+      // color="#0D2F4E"
+      style={{ textDecoration: "none", color: "#0D2F4E" }}
+    >
+      My Courses
+    </Link>,
+    <Typography key="3" color="text.primary">
+      {course.course_title}
+    </Typography>,
+  ];
+
   return (
     <>
       {isData && isData2 ? (
@@ -52,11 +70,71 @@ export default function CoursePage() {
         ) : (
           <div className={classes.coursePage}>
             <div className={classes.coursePage_container}>
+              <div
+                style={{
+                  display: "flex",
+                  alignSelf: "flex-start",
+                  marginTop: "15px",
+                }}
+              >
+                <Breadcrumbs
+                  separator={<NavigateNextIcon fontSize="small" />}
+                  aria-label="breadcrumb"
+                  fontSize="large"
+                >
+                  {breadcrumbs}
+                </Breadcrumbs>
+              </div>
               <div className={classes.coursePage_info}>
-                <h1>{course.course_title}</h1>
-                <p>{course.course_level}</p>
-                <p>duration of {course.course_duration}</p>
-                <p>{course.course_description}</p>
+                {/* <div style={{ display: "flex", alignSelf: "center" }}>
+                  <h1>{course.course_title}</h1>
+                </div> */}
+
+                <div
+                  style={{
+                    // border: "1px solid black",
+                    // padding: "15px",
+                    // borderRadius: "10px",
+                    display: "flex",
+                    // alignSelf: "flex-end",
+                    width: "300px",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <p
+                    style={{
+                      // border: "1px solid black",
+                      padding: "15px",
+                      borderRadius: "10px",
+                      backgroundColor: "white",
+                    }}
+                  >
+                    {course.course_level}
+                  </p>
+                  <p
+                    style={{
+                      // border: "1px solid black",
+                      padding: "15px",
+                      borderRadius: "10px",
+                      backgroundColor: "white",
+                    }}
+                  >
+                    duration of {course.course_duration}
+                  </p>
+                </div>
+                <div style={{ display: "flex", alignSelf: "flex-end" }}>
+                  <div style={{ width: "60%" }}>
+                    <p
+                      style={{
+                        padding: "15px",
+                        borderRadius: "10px",
+                        backgroundColor: "white",
+                      }}
+                    >
+                      {course.course_description}
+                    </p>
+                  </div>
+                </div>
               </div>
               <div className={classes.coursePage_lessons}>
                 <p>{course.lessons.length} lessons:</p>
