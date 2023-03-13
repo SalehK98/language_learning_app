@@ -47,30 +47,19 @@ export default function CoursePage() {
       if (!error2) {
         setUsers(result);
         setIsData2(true);
-
-        //     const drawCourses = () => {
-        //       const myCourse = users.course.filter((course) => {
-        //         return course.id === params.courseId;
-        //       });
-        //       console.log(myCourse);
-        //       //   const myCourses = users.courses.map((course) => {
-        //       //     return course.id;
-        //       //   });
-        //       //   return courses
-        //       //     .filter((course) => {
-        //       //       return myCourses.includes(course.id);
-        //       //     })
-        //       //     .map((course) => {
-        //       //       console.log("1");
-        //       //       return <CourseCard course={course} user={users} key={course.id} />;
-        //       //     });
-        //     };
-        //     drawCourses();
       }
     });
   }, []);
 
   const breadcrumbs = [
+    <Link
+      to="/dashBoard"
+      underline="underline"
+      key="2"
+      style={{ textDecoration: "none", color: "#0D2F4E" }}
+    >
+      DashBoard
+    </Link>,
     <Link
       to="/dashBoard/myCoursesPage"
       underline="underline"
@@ -150,7 +139,7 @@ export default function CoursePage() {
               </div>
               <div className={classes.coursePage_lessons}>
                 <p>{course.lessons.length} lessons:</p>
-                <Lessons lessons={course.lessons} />
+                <Lessons />
               </div>
             </div>
           </div>

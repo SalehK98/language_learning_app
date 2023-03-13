@@ -78,10 +78,12 @@ export default function TranslatePage() {
           variant={variant}
           onClick={translate}
           disabled={loading}
+          className={classes.translate_button}
           sx={{
             // marginBottom: 50,
             marginRight: 2,
             marginLeft: 2,
+            // fontSize: 15,
           }}
         >
           <span>translate</span>

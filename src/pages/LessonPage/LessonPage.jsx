@@ -1,7 +1,10 @@
 import React from "react";
 import classes from "./LessonPage.module.css";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams, Link } from "react-router-dom";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import { Typography } from "@mui/material";
 
 export default function LessonPage() {
   const params = useParams();
@@ -11,9 +14,54 @@ export default function LessonPage() {
   const { dialogue, vocabulary, practice_questions } = state.lesson_content;
   const navigate = useNavigate();
 
+  const breadcrumbs = [
+    <Link
+      to="/dashBoard"
+      underline="underline"
+      key="2"
+      style={{ textDecoration: "none", color: "#0D2F4E" }}
+    >
+      DashBoard
+    </Link>,
+    <Link
+      to="/dashBoard/myCoursesPage"
+      underline="underline"
+      key="2"
+      style={{ textDecoration: "none", color: "#0D2F4E" }}
+    >
+      My Courses
+    </Link>,
+    <Link
+      to={`/courses/${params.courseId}`}
+      underline="underline"
+      key="2"
+      style={{ textDecoration: "none", color: "#0D2F4E" }}
+    >
+      course.course_title
+    </Link>,
+    <Typography key="3" color="text.primary">
+      {state.lesson_title}
+    </Typography>,
+  ];
+
   return (
     <div className={classes.lessonPage}>
       <div className={classes.lessonPage_container}>
+        <div
+          style={{
+            display: "flex",
+            alignSelf: "flex-start",
+            marginTop: "15px",
+          }}
+        >
+          <Breadcrumbs
+            separator={<NavigateNextIcon fontSize="small" />}
+            aria-label="breadcrumb"
+            fontSize="large"
+          >
+            {breadcrumbs}
+          </Breadcrumbs>
+        </div>
         <div className={classes.lessonPage_dialogue}>
           {dialogue.map((el) => {
             return (

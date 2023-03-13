@@ -53,6 +53,10 @@ textarea {
   height: 30vh;
 }
 
+.translate_button {
+  font-size: 1.1vw;
+}
+
 @media screen and (max-width: 500px) {
   .translatePage_container {
     display: flex;
@@ -76,5 +80,9 @@ textarea {
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     border: transparent;
     border-radius: 5px;
+  }
+
+  .translate_button {
+    font-size: 3.2vw;
   }
 }
